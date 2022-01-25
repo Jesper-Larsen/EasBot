@@ -22,7 +22,7 @@ module.exports = async (client) => {
         return Table.addRow(file.split("/")[7], "❌ FAILED", "Missing a name.")
 
         if (!command.description)
-        return Table.addRow(command.name, "❌ FAILED", "Missing a desscription.")
+        return Table.addRow(command.name, "❌ FAILED", "Missing a description.")
 
         if(command.permission) {
             if (Perms.includes(command.permission))
@@ -34,7 +34,7 @@ module.exports = async (client) => {
         client.commands.set(command.name, command);
         CommandsArray.push(command);
 
-        await Table.addRow(command.name, "✔ SUCCESSFULL");
+        await Table.addRow(command.name, "✔ SUCCESSFUL");
 
     });
 
