@@ -5,10 +5,9 @@ module.exports = {
     description: "Ping",
     permission: "ADMINISTRATOR",
     /**
-     * 
      * @param {CommandInteraction} interaction 
      */
     execute(interaction) {
-        interaction.reply({content: "Pong"})
+        interaction.reply({ content: "Pong"})
     }
 }
