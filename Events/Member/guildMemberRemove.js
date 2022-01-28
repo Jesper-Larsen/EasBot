@@ -9,9 +9,8 @@ module.exports = {
   execute(member) {
     const { user, guild } = member;
     const Welcomer = new WebhookClient({
-      id: "936579006311038996",
-      token:
-        "pej7y1BL4IQf1zJVlMJM-e0q3IyiuEYfQRp-IYH-rd1KzAq8kXCCO_MfKWOmVt0sp7AN",
+      id: process.env.GUILD_MEMBER_REMOVE_ID,
+      token: process.env.GUILD_MEMBER_REMOVE_TOKEN,
     });
 
     const Welcome = new MessageEmbed()

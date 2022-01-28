@@ -1,5 +1,7 @@
 const { MessageEmbed, WebhookClient, GuildMember } = require("discord.js");
 
+require("dotenv").config();
+
 module.exports = {
   name: "guildMemberAdd",
   /**
@@ -10,9 +12,8 @@ module.exports = {
     const { user, guild } = member;
     member.roles.add("934049235198959687");
     const Welcomer = new WebhookClient({
-      id: "936559156440211486",
-      token:
-        "5g4Hcz6uWSMzsWP_2vJprO2uEUBb-dM3snsOhj3xjP42dGqfniO0iyTW-_3NvgznJq0_",
+      id: process.env.GUILD_MEMBER_ADD_ID,
+      token: process.env.GUILD_MEMBER_ADD_TOKEN,
     });
 
     const Welcome = new MessageEmbed()
