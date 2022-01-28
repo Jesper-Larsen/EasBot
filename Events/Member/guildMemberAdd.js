@@ -1,0 +1,37 @@
+const { MessageEmbed, WebhookClient, GuildMember } = require("discord.js");
+
+module.exports = {
+  name: "guildMemberAdd",
+  /**
+   *
+   * @param {GuildMember} member
+   */
+  execute(member) {
+    const { user, guild } = member;
+    member.roles.add("934049235198959687");
+    const Welcomer = new WebhookClient({
+      id: "936559156440211486",
+      token:
+        "5g4Hcz6uWSMzsWP_2vJprO2uEUBb-dM3snsOhj3xjP42dGqfniO0iyTW-_3NvgznJq0_",
+    });
+
+    const Welcome = new MessageEmbed()
+      .setColor("AQUA")
+      .setAuthor({
+        name: user.tag,
+        iconURL: user.avatarURL({ dynamic: true, size: 512 }),
+      })
+      .setThumbnail(user.avatarURL({ dynamic: true, size: 512 }))
+      .setDescription(
+        `
+    Welcome ${member} to the **${guild.name}**!\n
+    Account Created: <t:${parseInt(user.createdTimestamp / 1000)}:R>\n
+    Latest Member Count: **${guild.memberCount}** `
+      )
+      .setFooter({
+        text: `ID: ${user.id}`,
+      });
+
+    Welcomer.send({ embeds: [Welcome] });
+  },
+};
