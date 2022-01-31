@@ -15,5 +15,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonesTheG/EasBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonesTheG/EasBot/issues"
+  },
+  "homepage": "https://github.com/JonesTheG/EasBot#readme",
   "description": ""
 }
