@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       name: "functionality",
-      description: "Descripe the functionality of this suggestion.",
+      description: "Descripe the functionality of this suggestion",
       type: "STRING",
       required: true,
     },
