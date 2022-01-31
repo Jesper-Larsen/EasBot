@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       name: "name",
-      description: "Provide a name for your suggestion.",
+      description: "Provide a name for your suggestion",
       type: "STRING",
       required: true,
     },
