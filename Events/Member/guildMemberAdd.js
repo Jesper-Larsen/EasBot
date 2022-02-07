@@ -10,7 +10,7 @@ module.exports = {
    */
   execute(member) {
     const { user, guild } = member;
-    member.roles.add("934049235198959687");
+    member.roles.add("810199455063343155");
     const Welcomer = new WebhookClient({
       id: process.env.GUILD_MEMBER_ADD_ID,
       token: process.env.GUILD_MEMBER_ADD_TOKEN,
